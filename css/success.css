@@ -1,0 +1,94 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: lemon;
+}
+
+
+#logo{
+    position:relative;
+    left: 10px;
+    height: 60px;
+}
+
+
+#thank{
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#content{
+    background-color: rgb(164, 255, 164);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+#content h1{
+    color: green;
+}
+
+#content p{
+    color: black;
+    padding: 10px;
+}
+
+#content button{
+    background-color: green;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: lemon;
+    width: 200px;
+}
+
+
+
+
+
+footer{
+    background-color: #012952;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: lemon;
+
+}
+
+footer h3{
+    margin: 10px 0;
+    font-size: 1.5em;
+
+}
+
+footer p{
+    margin: 5px
+}
+
+footer a{
+    color: #3498DB;
+    text-decoration: none;
+
+}
+
+
+@font-face {
+    font-family: basic;
+    src: url("./fonts/ModeskaTrial-Black.ttf");
+}
+
+
+@font-face {
+    font-family: title;
+    src: url("./fonts/gunshipbold.ttf");
+}
+
+@font-face {
+    font-family: lemon;
+    src: url("./fonts/LEMONMILK-Medium.otf");
+}

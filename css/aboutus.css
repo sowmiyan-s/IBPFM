@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lemon;
+    
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+
+ 
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo {
+    width: auto;
+    height: 60px;
+    position:relative;
+    left: 10px;
+}
+#head-marquee{
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  width: 1100px;
+  text-align: center;
+
+}
+#head-button{
+  border: 0px;
+  border-radius: 5px;
+  background-color: rgb(54, 54, 54);
+  color: white;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #058b00;
+    padding: 10px 0;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9100;
+    border-radius: 10px;
+}
+
+
+#ads-logo{
+  display: block;
+  margin: auto;
+  height: 300px;
+}
+
+#ads-abb{
+  text-align: center;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+#ads-para{
+  background-color: #97ff93;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px;
+ 
+  text-align: center;
+}
+#dev-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+#dev-info{
+  background-color: rgb(178, 255, 126);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  margin: 20px;
+
+}
+
+#dev-name{
+  color: rgb(12, 139, 0);
+}
+
+#dev-email{
+  color: rgb(0, 148, 12);
+}
+
+#dev-github{
+  color: #012952;
+  text-decoration: none;
+}
+
+
+
+footer{
+    background-color: #012952;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: lemon;
+  
+  }
+  
+  footer h3{
+    color: white;
+    margin: 10px 0;
+    font-size: 1.5em;
+  
+  }
+  
+  footer p{
+    margin: 5px
+  }
+  
+  footer a{
+    color: #3498DB;
+    text-decoration: none;
+  
+  }
+
+  @font-face {
+    font-family: lemon;
+    src: url("./fonts/LEMONMILK-Medium.otf");
+}
+  

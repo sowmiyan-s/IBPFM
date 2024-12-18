@@ -1,0 +1,158 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: basic;
+    background-image: url('./img/bush.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: lemon;
+}
+
+header{
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#head-marquee{
+    color: black;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    width: 1100px;
+    text-align: center;
+
+}
+#head-button{
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo{
+    position:relative;
+    left: 10px;
+    height: 60px;
+}
+
+
+nav{
+    background-color: rgb(0, 107, 9);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: #ff9100;
+    border-radius: 10px;
+}
+
+#learn-container{
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 167, 0, 0.253);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px black;
+    font-family: lemon;
+}
+
+#learn-container h1 {
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+#intro{
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-family: basic;
+    font-family: lemon;
+}
+
+#start-button{
+    background: white;
+    color: green;
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-family: lemon;
+    
+
+
+}
+
+#start-button:hover{
+    
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px 0px black ;
+    background-color: green;
+    color: white;
+    
+
+}
+
+footer{
+    background-color: #012952;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: lemon;
+    position: relative;
+    bottom: -100px;
+  
+  }
+  
+  footer h3{
+    margin: 10px 0;
+    font-size: 1.5em;
+  
+  }
+  
+  footer p{
+    margin: 5px
+  }
+  
+  footer a{
+    color: #3498DB;
+    text-decoration: none;
+  
+  }
+
+
+  @font-face {
+    font-family: basic;
+    src: url("./fonts/ModeskaTrial-Black.ttf");
+}
+
+
+@font-face {
+    font-family: title;
+    src: url("./fonts/gunshipbold.ttf");
+}
+
+@font-face {
+    font-family: lemon;
+    src: url("./fonts/LEMONMILK-Medium.otf");
+}

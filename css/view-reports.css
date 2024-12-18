@@ -1,0 +1,142 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: lemon;
+}
+
+header{
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#head-marquee{
+    color: black;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    width: 1100px;
+    text-align: center;
+
+}
+#head-button{
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo{
+    position:relative;
+    left: 10px;
+    height: 60px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    
+}
+table, th, td {
+    border: 3px solid rgb(255, 255, 255);
+}
+th, td {
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+th {
+    background-color: #ff0000;
+    color: white;
+    text-align: center;
+}
+
+td{
+    background-color: #ffb7b7;
+}
+
+
+nav{
+    background-color: rgb(0, 107, 9);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: #ff9100;
+    border-radius: 10px;
+}
+
+
+footer{
+    background-color: #012952;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+
+footer h3{
+    margin: 10px 0;
+    font-size: 1.5em;
+
+}
+
+footer p{
+    margin: 5px
+}
+
+footer a{
+    color: #3498DB;
+    text-decoration: none;
+
+}
+
+#emailbut{
+    background-color: green;
+    color: white;
+    border: 0px;
+    font-family: lemon;
+    padding: 5px;
+    border-radius: 5px;
+}
+#mailid{
+    color: #012952;
+}
+
+
+
+@font-face {
+    font-family: basic;
+    src: url("./fonts/ModeskaTrial-Black.ttf");
+}
+
+
+@font-face {
+    font-family: title;
+    src: url("./fonts/gunshipbold.ttf");
+}
+
+@font-face {
+    font-family: lemon;
+    src: url("./fonts/LEMONMILK-Medium.otf");
+}

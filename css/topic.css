@@ -1,0 +1,159 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: lemon;
+
+}
+
+header{
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-family: lemon;
+    
+}
+#head-marquee{
+    color: black;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    width: 1100px;
+    text-align: center;
+
+}
+#head-button{
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo{
+    position:relative;
+    left: 10px;
+    height: 60px;
+}
+
+
+nav{
+    background-color: rgb(0, 107, 9);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    color: #ff9100;
+    border-radius: 10px;
+}
+
+#learn-title {
+    color: green;
+    text-align: center;
+}
+#learn-content{
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+#learn-para{
+    padding: 5px;
+}
+
+
+#button{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    font-family: lemon;
+
+}
+
+
+
+#pdf{
+    background-color: rgb(255, 72, 0);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 50px;
+}
+
+
+#gov{
+    height: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+footer{
+    background-color: #012952;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: lemon;
+
+}
+
+footer h3{
+    margin: 10px 0;
+    font-size: 1.5em;
+
+}
+
+footer p{
+    margin: 5px
+}
+
+footer a{
+    color: #3498DB;
+    text-decoration: none;
+
+}
+
+
+@font-face {
+    font-family: basic;
+    src: url("./fonts/ModeskaTrial-Black.ttf");
+}
+
+
+@font-face {
+    font-family: title;
+    src: url("./fonts/gunshipbold.ttf");
+}
+
+@font-face {
+    font-family: lemon;
+    src: url("./fonts/LEMONMILK-Medium.otf");
+}
