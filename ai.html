@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I B P F M</title>
+    <link rel="stylesheet" href="./css/ai.css">
+</head>
+<body>
+
+    <header>
+        
+        <img id="logo" src="./img/logo.png" alt="">
+        <marquee id="head-marquee" behavior="" direction="" >Intilligence Based Pollution Free Mission</marquee>
+        <a href="https://github.com/Bot-With-DOT" id="head-button">Bot With Dot</a>
+    </header>
+
+    <nav>
+        <a href="./index.html"><strong>HOME</strong></a>
+        <a href="./report.html"><strong>REPORT</strong></a>
+        <a href="./learn.html"><strong>LEARN</strong></a>
+        <a href="./aboutus.html"><strong>ABOUT US</strong></a>
+    </nav>
+
+
+
+
+
+    <div id="ads-data">
+        <h2>ECO AI<br>I help for the nature :)</h2>
+        <img src="./img/ailogo.png" alt="">
+
+</div>
+
+
+<div id="loadingSpinner" class="dot-spinner" style="display: none;">
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+    <div class="dot-spinner__dot"></div>
+</div>
+</div id='output-container'>
+<h6 id="output"><div id="output">
+    
+</div></h6>
+
+
+    
+
+    <div id="container-ai">
+
+        <input type="text" id="geminiInput" placeholder="Ask Me Anything">
+        <h3>Suggestion : <a href=""><br> How to purify sewage water ?</a><br><a href="">What is air quality index of chennai</a><br><a href="">Why to avoid using plastic</a></h3>
+        <button id="inputClick"  onclick="fun()">Submit</button>
+        
+    </div>
+    <div id="background"></div>
+
+
+   
+        <footer >
+            <h3 >I B P F M</h3>
+            <p >&copy; 2024 Sparkathon24. All rights reserved.</p>
+            <p >Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
+            <p >
+                <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank" >View on GitHub</a>
+            </p>
+        </footer>
+
+<script>
+
+
+    function fun(){
+        click();
+        sendToGemini();
+    }
+
+
+     function click(){
+        document.getElementById('inputClick').setAttribute("disabled",true);
+        document.getElementById('inputClick').style.backgroundColor = "rgb(207, 205, 205)";
+        }
+
+        async function sendToGemini() {
+    const inputValue = document.getElementById('geminiInput').value;
+    document.getElementById('loadingSpinner').style.display = 'flex';
+    document.getElementById('output').innerHTML = '';
+
+    const restrictedPrompt = `Please answer the following question with information only related to the environment, pollution, climate change, or sustainability: ${inputValue}`;
+    const apiUrl = 'https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDtp8_iQ-yG3z_Jixjg_MV20KoSzp6-Plo';
+
+    const requestBody = {
+        prompt: {
+            text: restrictedPrompt
+        },
+        temperature: 0.7,
+        maxOutputTokens: 500
+    };
+
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        document.getElementById('loadingSpinner').style.display = 'none';
+
+        if (data.candidates && data.candidates.length > 0) {
+            let outputText = data.candidates[0].output;
+
+            
+            outputText = outputText.replace(/\*/g, '');
+
+            document.getElementById('output').style.backgroundColor = "white";
+            document.getElementById('output').style.color = "black";
+            document.getElementById('output').innerText = outputText;
+        } else {
+            document.getElementById('output').style.backgroundColor = "white";
+            document.getElementById('output').style.color = "black";
+            document.getElementById('output').innerText = 'No valid response from the API.';
+        }
+    } catch (error) {
+        console.error('Error object:', error);
+
+        
+        document.getElementById('loadingSpinner').style.display = 'none';
+
+        document.getElementById('output').style.backgroundColor = "red";
+        document.getElementById('output').style.color = "white";
+        document.getElementById('output').innerText = `An error occurred: ${error.message || 'Unknown error'}`;
+    }
+
+    document.getElementById('inputClick').removeAttribute("disabled");
+    document.getElementById('inputClick').style.backgroundColor = "green";
+}
+
+</script>
+
+</body>
+</html>

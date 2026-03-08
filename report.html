@@ -10,12 +10,12 @@
 <body>
     <header>
         <img id="logo" src="./img/logo.png" alt="">
-        <marquee id="head-marquee" behavior="" direction="" >Intilligence Based Pollution Free Mission</marquee>
+        <marquee id="head-marquee" behavior="" direction="">Intilligence Based Pollution Free Mission</marquee>
         <a href="https://github.com/Bot-With-DOT" id="head-button">Bot With Dot</a>
     </header>
 
     <nav>
-        <a href="./Index.html"><strong>HOME</strong></a>
+        <a href="./index.html"><strong>HOME</strong></a>
         <a href="./report.html"><strong>REPORT</strong></a>
         <a href="./learn.html"><strong>LEARN</strong></a>
         <a href="./aboutus.html"><strong>ABOUT US</strong></a>
@@ -32,13 +32,15 @@
 
     <div id="form-container">
         <h1 id="form-title">REPORT NOW</h1>
-        <form  id="input-fields">
+        <form id="input-fields" action="php/submit_report.php" method="POST">
             <input type="text" id="input-block1" required placeholder="Name" name="firstname"><br>
-            <input type="email" id="input-block2" required placeholder="Email" name="email" ><br>
-            <input type="text" id="input-block3" required placeholder="Address " name="address" ><br>
-            <input type="text" id="input-block3" required placeholder="Description about your report" name="description" ><br>
-            <div class="g-recaptcha" data-sitekey="6LePMS4qAAAAABPtWkQ7efpa8BcfiHu6VPwH6kd5" data-callback="enableSubmit"></div>
-           <a  href="success.html"><button id="post"  >SUBMIT</button></a>
+            <input type="email" id="input-block2" required placeholder="Email" name="email"><br>
+            <input type="text" id="input-block3" required placeholder="Address " name="address"><br>
+            <input type="text" id="input-block4" required placeholder="Description about your report"
+                name="description"><br>
+            <div class="g-recaptcha" data-sitekey="6LePMS4qAAAAABPtWkQ7efpa8BcfiHu6VPwH6kd5"
+                data-callback="enableSubmit"></div>
+            <button type="submit" id="post" disabled>SUBMIT</button>
         </form>
     </div>
 
@@ -46,17 +48,19 @@
 
     <section class="awareness">
         <h2>Why Keeping Our Earth Clean Matters</h2>
-        <p>Pollution is one of the biggest threats to our planet. By reporting areas that need cleaning, you are contributing to a healthier, cleaner environment for all. Every small action adds up to a big impact. Let’s protect our Earth together.</p>
+        <p>Pollution is one of the biggest threats to our planet. By reporting areas that need cleaning, you are
+            contributing to a healthier, cleaner environment for all. Every small action adds up to a big impact. Let’s
+            protect our Earth together.</p>
         <ul>
             <li>Reduce waste by recycling and composting.</li>
             <li>Support community clean-up initiatives.</li>
             <li>Educate others about the importance of environmental conservation.</li>
         </ul>
     </section>
-    
 
 
-    
+
+
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
@@ -65,20 +69,20 @@
             document.getElementById("post").disabled = false;
         }
     </script>
-    
 
 
 
 
-    <footer >
-        <h3 >I B P F M</h3>
-        <p >&copy; 2024 Sparkathon24</p>
-        <p >Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
-        <p >
-            <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank" >View on GitHub</a>
+
+    <footer>
+        <h3>I B P F M</h3>
+        <p>&copy; 2024 Sparkathon24</p>
+        <p>Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
+        <p>
+            <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank">View on GitHub</a>
         </p>
     </footer>
-    
+
 
 </body>
 

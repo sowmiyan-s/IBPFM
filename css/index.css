@@ -135,7 +135,7 @@ nav a:hover {
     color: white;
     margin: 0px;
     padding: 20px 0px 100px 0px;
-    background-image: url('./img/earth.jpg');
+    background-image: url('../img/earth.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: 150%;
