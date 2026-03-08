@@ -28,7 +28,7 @@ IBPFM/
 
 ## 🛠️ Workflow: Pollution Reporting
 
-The website features a reporting workflow that allows users to notify the organization about pollution in their area.
+The website features a reporting workflow that allows user to notify the organization about pollution in their area.
 
 1.  **Frontend**: User fills out the form in `report.html`.
 2.  **Backend**: The form data is sent via POST to `php/submit_report.php`.
