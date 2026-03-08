@@ -1,64 +1,75 @@
-body{
-    background-color: rgb(255, 255, 255);
+:root {
+    --primary: #4CAF50;
+    --primary-dark: #388E3C;
+    --secondary: #012952;
+    --accent: #ff9100;
+    --bg-white: #ffffff;
+    --text-main: #2c3e50;
+    --text-light: #ecf0f1;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --transition-base: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-white);
     margin: 0px;
-    font-family: lemon;
-    background-image: url('./img/pattern.png');
-    background-size: cover;
+    font-family: 'lemon', sans-serif;
+    color: var(--text-main);
 }
 
-header{
-    padding: 5px;
-    background-color: rgb(255, 255, 255);
-    color: white;
+header {
+    padding: 10px 20px;
+    background-color: var(--bg-white);
     display: flex;
-    justify-content: space-around;
-    
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-#head-marquee{
-    color: black;
-    font-size: 20px;
-    position: relative;
-    top: 20px;
-    width: 1100px;
-    text-align: center;
 
+#head-marquee {
+    color: var(--text-main);
+    font-size: 18px;
+    flex-grow: 1;
+    text-align: center;
 }
-#head-button{
-    border: 0px;
+
+#head-button {
+    border: none;
     border-radius: 5px;
-    background-color: rgb(54, 54, 54);
-    color: white;
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
+    background-color: #333;
+    color: var(--text-light);
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: var(--transition-base);
 }
 
-#logo{
-    position:relative;
-    left: 10px;
-    height: 60px;
+#head-button:hover {
+    background-color: #000;
 }
 
-
-nav{
-    background-color: rgb(0, 107, 9);
-    color: white;
+nav {
+    background-color: var(--primary);
+    color: var(--text-light);
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
 }
 
-a{
+nav a {
     text-decoration: none;
-    color: white;
-    font-family: basic;
+    color: inherit;
+    font-family: 'basic', sans-serif;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: #ff9100;
-    border-radius: 10px;
+    color: var(--accent);
 }
 
 
@@ -96,75 +107,70 @@ nav a:hover {
 
 /* Ithu vandu report form*/
 #form-container {
-    
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glass-shadow);
     text-align: center;
-    background-color: rgb(0, 119, 255);
-    padding-bottom: 50px;
-    margin: 20px;
-}
-
-#form-title {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-    
-}
-
-
-
-#input-block1,#input-block2,#input-block3 {
-    padding: 10px;
-    margin: 10px;
-    top: 100px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: 0px;
-    text-align: center;
-    border-radius: 5px;
-    font-family: monospace;
-    font-size: 20px;
-    
-
-}
-
-
-#input-block1,#input-block2{
-
-    width: 80%;
-}
-
-
-#input-block3{
-
-    width: 80%;
-    height: 100px;
-    
-    
-}
-
-#post {
-    width: 500px;
-    padding: 10px;
-    background-color: #ffffff;
-    color: rgb(0, 183, 255);
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    text-align: center;
-    margin: 10px;
-    font-family: lemon;
-}
-
-#post:hover {
-    background-color: #1100ff;
+    background: linear-gradient(135deg, #2196F3, #00BCD4);
+    margin: 40px auto;
+    max-width: 900px;
     color: white;
 }
 
-.g-recaptcha{
+#form-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#input-fields input,
+#input-fields textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px auto;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    display: block;
+}
+
+#map-selector {
+    height: 300px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: var(--radius-md);
+    border: 3px solid white;
+}
+
+#post {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'lemon', sans-serif;
+    margin-top: 20px;
+    transition: var(--transition-base);
+}
+
+#post:hover:not(:disabled) {
+    background-color: #e68200;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#post:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.g-recaptcha {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -177,7 +183,7 @@ nav a:hover {
     color: white;
     font-family: basic;
     margin: 30px;
-    
+
 }
 
 .awareness h2 {
@@ -185,28 +191,28 @@ nav a:hover {
     font-size: 1.8em;
     color: rgb(255, 255, 255);
     text-align: center;
-    
+
 }
 
 .awareness p {
     margin-bottom: 10px;
     font-size: 1.2em;
     text-align: center;
-    
-    
+
+
 }
 
 .awareness ul {
     list-style-type: disc;
-    
-    
+
+
 }
 
 .awareness ul li {
     margin-bottom: 10px;
 }
 
-footer{
+footer {
     background-color: #012952;
     color: white;
     text-align: center;
@@ -215,17 +221,17 @@ footer{
 
 }
 
-footer h3{
+footer h3 {
     margin: 10px 0;
     font-size: 1.5em;
 
 }
 
-footer p{
+footer p {
     margin: 5px
 }
 
-footer a{
+footer a {
     color: #3498DB;
     text-decoration: none;
 

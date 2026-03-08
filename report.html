@@ -2,88 +2,105 @@
 <html lang="en">
 
 <head>
-
-    <title>IB P F M</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report - IB P F M</title>
     <link rel="stylesheet" href="./css/report.css">
+    <!-- Leaflet Localisation Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 
 <body>
     <header>
-        <img id="logo" src="./img/logo.png" alt="">
-        <marquee id="head-marquee" behavior="" direction="">Intilligence Based Pollution Free Mission</marquee>
+        <img id="logo" src="./img/logo.png" alt="IBPFM Logo" height="60">
+        <marquee id="head-marquee">Intelligence Based Pollution Free Mission - Together for a Greener India</marquee>
         <a href="https://github.com/Bot-With-DOT" id="head-button">Bot With Dot</a>
     </header>
 
     <nav>
-        <a href="./index.html"><strong>HOME</strong></a>
-        <a href="./report.html"><strong>REPORT</strong></a>
-        <a href="./learn.html"><strong>LEARN</strong></a>
-        <a href="./aboutus.html"><strong>ABOUT US</strong></a>
+        <a href="./index.html">HOME</a>
+        <a href="./report.html">REPORT</a>
+        <a href="./learn.html">LEARN</a>
+        <a href="./aboutus.html">ABOUT US</a>
     </nav>
 
     <div id="dustbin-container">
-        <img src="./img/dustbin.png" id="dustbin" alt="Dustbin Image">
-
+        <img src="./img/dustbin.png" id="dustbin" alt="Environmental Cleanup">
         <div id="dustbin-text">
             <h2 id="dustbin-text-title">Does your location have a dump?</h2>
-            <h4 id="dustbin-text-para">Raise a complaint now to get the area cleaned by the organization!</h4>
+            <h4 id="dustbin-text-para">Raise a report now to help us coordinate community cleanup actions!</h4>
         </div>
     </div>
 
     <div id="form-container">
-        <h1 id="form-title">REPORT NOW</h1>
-        <form id="input-fields" action="php/submit_report.php" method="POST">
-            <input type="text" id="input-block1" required placeholder="Name" name="firstname"><br>
-            <input type="email" id="input-block2" required placeholder="Email" name="email"><br>
-            <input type="text" id="input-block3" required placeholder="Address " name="address"><br>
-            <input type="text" id="input-block4" required placeholder="Description about your report"
-                name="description"><br>
+        <h1 id="form-title">REPORT HOTSPOT</h1>
+        <form id="input-fields" action="php/submit_report.php" method="POST" enctype="multipart/form-data">
+            <input type="text" placeholder="Your Name" name="firstname" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <input type="text" placeholder="Site Address" name="address" required>
+            <textarea placeholder="Tell us more about the pollution level and type (plastic, sewage, etc.)"
+                name="description" rows="4" required></textarea>
+
+            <div style="margin: 20px 0;">
+                <label style="color: white; display: block; margin-bottom: 10px; font-weight: bold;">Step 1: Upload
+                    Photo of the Site</label>
+                <input type="file" name="report_image" accept="image/*" required
+                    style="background: white; padding: 10px;">
+            </div>
+
+            <div style="margin: 20px 0;">
+                <label style="color: white; display: block; margin-bottom: 10px; font-weight: bold;">Step 2: Pin the
+                    Location</label>
+                <div id="map-selector"></div>
+                <input type="hidden" name="latitude" id="lat">
+                <input type="hidden" name="longitude" id="lng">
+            </div>
+
             <div class="g-recaptcha" data-sitekey="6LePMS4qAAAAABPtWkQ7efpa8BcfiHu6VPwH6kd5"
                 data-callback="enableSubmit"></div>
-            <button type="submit" id="post" disabled>SUBMIT</button>
+            <button type="submit" id="post" disabled>SUBMIT REPORT</button>
         </form>
     </div>
 
-
-
     <section class="awareness">
-        <h2>Why Keeping Our Earth Clean Matters</h2>
-        <p>Pollution is one of the biggest threats to our planet. By reporting areas that need cleaning, you are
-            contributing to a healthier, cleaner environment for all. Every small action adds up to a big impact. Let’s
-            protect our Earth together.</p>
-        <ul>
-            <li>Reduce waste by recycling and composting.</li>
-            <li>Support community clean-up initiatives.</li>
-            <li>Educate others about the importance of environmental conservation.</li>
+        <h2>Why Your Action Matters</h2>
+        <p>Transparency is the first step towards transformation. By documenting and pinning pollution hotspots, you
+            help organizations prioritize resources and mobilize local action.</p>
+        <ul style="max-width: 600px; margin: 20px auto; text-align: left;">
+            <li>Reports are audited for community accountability.</li>
+            <li>Geolocation data enables precise coordination with local bodies.</li>
+            <li>Photos provide evidence of the scale of environmental neglect.</li>
         </ul>
     </section>
 
-
-
-
-
+    <!-- Leaflet and Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        function enableSubmit() {
+        // Init Map
+        const map = L.map('map-selector').setView([20.5937, 78.9629], 5); // India Centered
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
+        let marker = null;
+        map.on('click', function (e) {
+            if (marker) map.removeLayer(marker);
+            marker = L.marker(e.latlng).addTo(map);
+            document.getElementById('lat').value = e.latlng.lat;
+            document.getElementById('lng').value = e.latlng.lng;
+        });
+
+        function enableSubmit() {
             document.getElementById("post").disabled = false;
         }
     </script>
 
-
-
-
-
     <footer>
         <h3>I B P F M</h3>
-        <p>&copy; 2024 Sparkathon24</p>
-        <p>Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
-        <p>
-            <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank">View on GitHub</a>
-        </p>
+        <p>&copy; 2026 Sparkathon24 - Bot With Dot Team</p>
+        <p><a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank">View Project on GitHub</a></p>
     </footer>
-
-
 </body>
 
 </html>

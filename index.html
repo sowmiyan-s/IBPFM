@@ -1,15 +1,18 @@
 <html lang="en">
+
 <head>
-   
+
     <title>I B P F M</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <body>
 
     <header>
-        
+
         <img id="logo" src="./img/logo.png" alt="">
-        <marquee id="head-marquee" behavior="" direction="" >Intilligence Based Pollution Free Mission</marquee>
+        <marquee id="head-marquee" behavior="" direction="">Intilligence Based Pollution Free Mission</marquee>
         <a href="https://github.com/Bot-With-DOT" id="head-button">Bot With Dot</a>
     </header>
     <nav>
@@ -20,88 +23,89 @@
     </nav>
 
     <div id="polluted-data">
-    <div id="polluted-text">
-    <h1>Today's Most Polluted City in India</h1>
-    <h5><div id="pollutedCity">Loading...</div></h5>
-    </div>
-
-</div>
-
-
-
-
-
-
-<div id="overall">
-
-    <div id="ailogo-container">
-        <img src="./img/ailogo.png" id="ailogo" alt="">
+        <div id="polluted-text">
+            <h1>Today's Most Polluted City in India</h1>
+            <h5>
+                <div id="pollutedCity">Loading...</div>
+            </h5>
         </div>
 
+    </div>
+
+
+
+
+
+
+    <main id="overall">
         <div id="start-container">
             <h1 id="start-head">Get started</h1>
-            <h3 id="start-end"> with our ai chat assistant !</h3>
-            <a href="./ai.html"><button  id="chat-now">Chat Now</button></a>
-        </div>   
-        
-    
+            <h3 id="start-end">with our AI environment assistant!</h3>
+            <p style="margin-top: 20px; opacity: 0.8; max-width: 500px;">
+                Ask ECO AI about anything from local recycling to global climate patterns. Start your journey towards a
+                sustainable future today.
+            </p>
+            <a href="./ai.html"><button id="chat-now">Chat Now</button></a>
+        </div>
+
+        <div id="ailogo-container">
+            <img src="./img/ailogo.png" id="ailogo" alt="Eco AI Robot Mascot">
+        </div>
+    </main>
+
+    <div id="span-container">
+        <div id="span-box">
+            <img src="./img/delete.png" alt="">
+            <P>Report to clean junks in your area</P>
+            <a href="report.html"><button>Report Now</button></a>
+        </div>
+
+        <div id="span-box">
+            <img src="./img/chat.png" alt="">
+            <P>Chat with our ai</P>
+            <a href="./ai.html"><button>Chat Now</button></a>
+        </div>
+
+        <div id="span-box">
+            <img src="./img/learn.png" alt="">
+            <P>Learn about the eco-system of earth</P>
+            <a href="./learn.html"><button>Learn Now</button></a>
+        </div>
 
 
-</div>
 
-<div id="span-container">
-    <div id="span-box">
-        <img src="./img/delete.png"   alt="">
-        <P>Report to clean junks in your area</P>
-        <a href="report.html"><button>Report Now</button></a>
     </div>
 
-    <div id="span-box">
-        <img src="./img/chat.png" alt="">
-        <P>Chat with our ai</P>
-        <a href="./ai.html"><button>Chat Now</button></a>
+
+
+    <div id="course-container">
+        <div>
+            <h1 id="course-title">Learn the evironment by certified courses in india</h1>
+            <a href="./gov.html"><button id="course-button">Enroll Now</button></a>
+        </div>
+
+        <div><img width="100px" src="./img/certificate.png" alt=""></div>
+
     </div>
 
-    <div id="span-box">
-        <img src="./img/learn.png" alt="">
-        <P>Learn about the eco-system of earth</P>
-        <a href="./learn.html"><button>Learn Now</button></a>
-    </div>
+    <img src="./img/green.jpg" id="nature" width="100%" alt="">
 
 
-    
-</div>
-
-
-
-<div id="course-container">
-    <div>
-    <h1 id="course-title">Learn the evironment by certified courses in india</h1>
-    <a href="./gov.html"><button id="course-button">Enroll Now</button></a>
-</div>
-
-<div><img width="100px" src="./img/certificate.png" alt=""></div>
-    
-</div>
-
-<img src="./img/green.jpg" id="nature"  width="100%" alt="">
-
-
-<footer >
-    <h3 >I B P F M</h3>
-    <p >&copy; 2024 Sparkathon24</p>
-    <p >Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
-    <p >
-        <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank" >View on GitHub</a>
-    </p>
-</footer>
+    <footer>
+        <h3>I B P F M</h3>
+        <p>&copy; 2024 Sparkathon24</p>
+        <p>Project by Vishal, Sowmiyan, Sudarson, and Sathwik</p>
+        <p>
+            <a href="https://github.com/Bot-With-DOT/IBPFM" target="_blank">View on GitHub</a>
+        </p>
+    </footer>
 
 
 
     <script>
-        
 
-        
+
+
 
 
         async function getMostPollutedCity() {
@@ -126,11 +130,11 @@
             }
         }
 
-        
 
 
 
-        
+
+
         getMostPollutedCity();
 
 
@@ -138,7 +142,8 @@
 
 
 
-        <p></p>
+    <p></p>
     </div>
 </body>
+
 </html>

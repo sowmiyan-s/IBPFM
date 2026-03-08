@@ -20,6 +20,9 @@ CREATE TABLE IF NOT EXISTS reports (
     email VARCHAR(255) NOT NULL,
     address TEXT NOT NULL,
     description TEXT NOT NULL,
+    image_url VARCHAR(255) DEFAULT NULL,
+    latitude DECIMAL(10, 8) DEFAULT NULL,
+    longitude DECIMAL(11, 8) DEFAULT NULL,
     status ENUM('Pending', 'In Progress', 'Resolved') DEFAULT 'Pending',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
