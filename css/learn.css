@@ -148,11 +148,16 @@ footer a {
 }
 
 @font-face {
-    font-family: basic;
-    src: url("../fonts/ModeskaTrial-Black.ttf");
+    font-family: 'basic';
+    src: url("./fonts/ModeskaTrial-Black.ttf");
 }
 
 @font-face {
-    font-family: lemon;
-    src: url("../fonts/LEMONMILK-Medium.otf");
+    font-family: 'title';
+    src: url("./fonts/gunshipbold.ttf");
+}
+
+@font-face {
+    font-family: 'lemon';
+    src: url("./fonts/LEMONMILK-Medium.otf");
 }
